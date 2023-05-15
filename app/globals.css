@@ -1,3 +1,6 @@
+body{
+  margin: 0;
+}
 .list-bg {
   background: rgb(249, 250, 255);
   padding: 10px;
