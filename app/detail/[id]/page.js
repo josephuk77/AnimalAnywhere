@@ -1,5 +1,6 @@
 import { connectDB } from "@/util/database";
 import { ObjectId } from "mongodb";
+import Link from "next/link";
 
 export default async function Detail(props){
 
@@ -18,6 +19,8 @@ export default async function Detail(props){
             <h4>상세페이지</h4>
             <h4>{result.title}</h4>
             <p>{result.content}</p>
+            <Link href={'/edit/'+result._id.toString()}>수정</Link>
+            
         </div>
     )
 }

@@ -10,6 +10,7 @@ export default async function List() {
 
   return (
     <div className="list-bg">
+      <Link href={'/write'}>글 쓰기</Link>
       {
         result.map((a, i) => {
           return (
