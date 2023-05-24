@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+head;
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,15 @@ export default function RootLayout({ children }) {
         />
         <meta name="generator" content="Hugo 0.104.2" />
         <title>Animal anywhere</title>
+        <script
+          type="text/javascript"
+          src="https://developers.kakao.com/sdk/js/kakao.min.js"
+        ></script>
+        <script
+          type="text/javascript"
+          src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js"
+          charset="utf-8"
+        ></script>
         <script
           src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
           integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
