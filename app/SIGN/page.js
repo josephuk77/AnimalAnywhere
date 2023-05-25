@@ -1,4 +1,5 @@
 import { connectDB } from "@/util/database";
+import Footers from "../tag/Footers";
 
 export default async function Signin() {
   const client = await connectDB;
@@ -142,7 +143,7 @@ export default async function Signin() {
             회원가입
           </button>
           <div type="submit">
-            <a id="custom-login-btn" onClick={핸들러}>
+            <a id="custom-login-btn" onClicick="">
               <img
                 src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg"
                 width="242"
@@ -159,6 +160,7 @@ export default async function Signin() {
           </div>
         </div>
       </div>
+      <Footers />
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-head;
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -153,50 +152,12 @@ export default function RootLayout({ children }) {
           </div>
         </div>
 
-        <div className="container">
-          <footer className="py-3 my-4">
-            <ul className="nav justify-content-center border-bottom pb-3 mb-3">
-              <li className="nav-item">
-                <a href="#" className="btn btn-light text-dark me-2">
-                  맨위로 올라가기
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#" className="btn btn-light text-dark me-2">
-                  Q&A
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#" className="btn btn-light text-dark me-2">
-                  자랑해요
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#" className="btn btn-light text-dark me-2">
-                  병원후기,별점
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#" className="btn btn-light text-dark me-2">
-                  Github
-                </a>
-              </li>
-            </ul>
-            <p className="text-center text-body-secondary">
-              &copy; 2023.06.08 by Animal anywhere
-            </p>
-          </footer>
-        </div>
-        <script
-          src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
-          integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
-          crossorigin="anonymous"
-        ></script>
         <script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
           crossorigin="anonymous"
         ></script>
+        {children}
       </body>
     </html>
   );
