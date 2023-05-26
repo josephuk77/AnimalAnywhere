@@ -1,0 +1,49 @@
+.content-wrap {
+  display: none;
+  padding: 20px;
+  background: #eee;
+}
+.tabs {
+  display: block;
+  position: relative;
+  margin: 50px auto;
+  width: 600px;
+}
+
+.tabs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tabs ul li {
+  display: inline-block;
+  margin: 0;
+}
+
+.tabs ul li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  background: #eee;
+  color: #333;
+  font-size: 16px;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.tabs ul li a:hover {
+  background: #333;
+  color: #fff;
+}
+
+.content-wrap section {
+  display: none;
+  padding: 20px;
+  background: #eee;
+}
+
+.content-wrap section p {
+  margin: 0;
+  font-size: 20px;
+}
