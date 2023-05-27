@@ -21,7 +21,6 @@ export default async function Detail(props){
             <p>{result.content}</p>
             <div>
                 <Link href={'/edit/'+result._id.toString()}>수정&nbsp;&nbsp;&nbsp;</Link> 
-                <Link methode="DELETE" href={'/api/post/delete/'+result._id}>삭제</Link>
             </div>
         </div>
     )

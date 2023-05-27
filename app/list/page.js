@@ -1,5 +1,6 @@
 import { connectDB } from "@/util/database";
 import Link from "next/link";
+import ListItem from "./ListItem";
 
 export default async function List() {
 
@@ -7,21 +8,10 @@ export default async function List() {
   const db = client.db("AnimalAnywhere");
   let result = await db.collection('post').find().toArray();
   console.log(result);
-
-  return (
+  
+  return(
     <div className="list-bg">
-      <Link href={'/write'}>글 쓰기</Link>
-      {
-        result.map((a, i) => {
-          return (
-            <div className="list-item">
-              <Link href={'/detail/'+result[i]._id.toString()}><h4>{result[i].title}</h4></Link>
-              <p>1월 1일</p>
-            </div>
-
-          )
-        })
-      }
+      <ListItem result={result}/>
     </div>
   )
 
