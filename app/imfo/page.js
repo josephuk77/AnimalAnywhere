@@ -1,6 +1,5 @@
 import { connectDB } from "@/util/database";
 import Footers from "../tag/Footers";
-import "./globals.css";
 export default async function Home() {
   const client = await connectDB;
   const db = client.db("AnimalAnywhere");
