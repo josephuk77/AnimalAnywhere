@@ -1,6 +1,6 @@
 import { connectDB } from "@/util/database";
-import Footers from "./tag/Footers";
-
+import Footers from "../tag/Footers";
+import "../globals.css";
 export default async function Main() {
   const client = await connectDB;
   const db = client.db("AnimalAnywhere");
@@ -8,8 +8,8 @@ export default async function Main() {
   console.log(result);
 
   return (
-    <div>
-      <div className="container">
+    <div className="container">
+      <main className="container">
         <div className="p-4 p-md-5 mb-4 rounded text-bg-dark">
           <div className="col-md-6 px-0">
             <h1 className="display-4 fst-italic">Animal anywhere 인사</h1>
@@ -88,7 +88,7 @@ export default async function Main() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
       <Footers />
     </div>
   );
