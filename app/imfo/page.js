@@ -1,5 +1,6 @@
 import { connectDB } from "@/util/database";
 import Footers from "../tag/Footers";
+
 export default async function Home() {
   const client = await connectDB;
   const db = client.db("AnimalAnywhere");
@@ -7,134 +8,116 @@ export default async function Home() {
   console.log(result);
 
   return (
-    <div class="container">
+    <div className="container">
       <div>
-        <div>
-          <div
-            class="shadow-none p-3 bg-body-tertiary rounded"
-            style="padding: 15px 30px; border-radius: 10px; font-weight: bold;"
-          >
-            <div class="p-3 mb-3 bg-warning-subtle text-emphasis-warning">
-              <div class="tabs tabs-style-linetriangle">
-                <nav>
-                  <ul>
-                    <li>
-                      <a href="#div-linetriangle-1">
-                        <span>영업시간</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#div-linetriangle-2">
-                        <span>응급실</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#div-linetriangle-3">
-                        <span>주차장</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#div-linetriangle-4">
-                        <span>위치</span>
-                      </a>
-                    </li>
-                  </ul>
-                  <form class="d-flex" role="search">
-                    <input
-                      class="form-control me-2"
-                      type="search"
-                      placeholder="병원을 입력하세요.."
-                      aria-label="Search"
-                    />
-                    <button class="btn btn-outline-success" type="submit">
-                      검색
-                    </button>
-                  </form>
-                </nav>
-              </div>
-              <div class="position-relative">
-                <div class="position-absolute top-30 start-50">
-                  <div class="btn-group">
-                    <button
-                      class="btn btn-secondary dropdown-toggle"
-                      type="button"
-                      data-bs-toggle="dropdown"
-                      data-bs-auto-close="true"
-                      aria-expanded="false"
-                    >
-                      지역선택
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a id="Seoul" class="dropdown-item" href="#">
-                          서울
-                        </a>
-                      </li>
-                      <li>
-                        <a id="rudrl" class="dropdown-item" href="#">
-                          경기
-                        </a>
-                      </li>
-                      <li>
-                        <a id="rudtkd" class="dropdown-item" href="#">
-                          경상도
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+        <div
+          className="shadow-none p-3 bg-body-tertiary rounded"
+          style={{
+            padding: "30px 30px",
+            borderRadius: "10px",
+            fontWeight: "bold",
+          }}
+        >
+          <div>
+            <div className="tabs tabs-style-linetriangle">
+              <nav>
+                <ul>
+                  <li>
+                    <a href="#div-linetriangle-1">
+                      <span>영업시간</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#div-linetriangle-2">
+                      <span>응급실</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#div-linetriangle-3">
+                      <span>주차장</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#div-linetriangle-4">
+                      <span>위치</span>
+                    </a>
+                  </li>
+                </ul>
+                <form className="d-flex" role="search">
+                  <input
+                    className="form-control me-2"
+                    type="search"
+                    placeholder="병원을 입력하세요.."
+                    aria-label="Search"
+                  />
+                  <button className="btn btn-outline-success" type="submit">
+                    검색
+                  </button>
+                </form>
+              </nav>
             </div>
           </div>
         </div>
       </div>
-      <div class="row mb-2">
-        <div class="col-md-6">
-          <div class="map" id="inf">
+
+      <div className="row mb-2">
+        <div className="col-md-6">
+          <div className="map" id="inf">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.793095414915!2d126.87631921564743!3d37.53637433361191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9e9825bc27f7%3A0x6662bd7a5253af53!2z7Jqw7ISx7JeQ7Y6g7YOA7Jq0!5e0!3m2!1sko!2skr!4v1613310853103!5m2!1sko!2skr"
+              src="https://www.naver.com/"
               width="720"
               height="450"
               frameborder="0"
-              style="border:0;"
+              style={{ border: 0 }}
               allowfullscreen=""
               aria-hidden="false"
               tabindex="0"
-            >
-              z
-            </iframe>
+            ></iframe>
           </div>
         </div>
 
-        <div class="col-md-6">
-          <div class="row g-2 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-              <strong class="d-inline-block mb-2 text-primary"></strong>
-              <h3 class="mb-0">Featured post</h3>
-              <div class="mb-1 text-muted">Nov 12</div>
-              <p class="card-text mb-auto">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content.
-              </p>
-              <a href="#" class="stretched-link">
-                Continue reading
+        <div className="col-6" style={{ float: "float:rigth" }}>
+          <div className="row g-2 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div className="col p-4 d-flex flex-column position-static">
+              <strong className="d-inline-block mb-2 text-primary"></strong>
+              <h3 className="mb-0">병원이름(검색시)</h3>
+              <div className="mb-1 text-muted">영업시간()</div>
+              <p className="card-text mb-auto">정보 상세히()</p>
+              <a href="#" className="stretched-link">
+                (자세히 보기 아직 모르겠음)
               </a>
             </div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="row g-2 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-              <strong class="d-inline-block mb-2 text-primary"></strong>
-              <h3 class="mb-0">Featured post</h3>
-              <div class="mb-1 text-muted">Nov 12</div>
-              <p class="card-text mb-auto">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content.
-              </p>
-              <a href="#" class="stretched-link">
-                Continue reading
-              </a>
+          <div className="position-relative">
+            <div className="position-absolute top-30 start-50">
+              <div className="btn-group">
+                <button
+                  className="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  data-bs-auto-close="true"
+                  aria-expanded="false"
+                >
+                  지역선택
+                </button>
+                <ul className="dropdown-menu">
+                  <li>
+                    <a id="Seoul" className="dropdown-item" href="#">
+                      서울
+                    </a>
+                  </li>
+                  <li>
+                    <a id="rudrl" className="dropdown-item" href="#">
+                      경기
+                    </a>
+                  </li>
+                  <li>
+                    <a id="rudtkd" className="dropdown-item" href="#">
+                      경상도
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
