@@ -1,5 +1,6 @@
 import { connectDB } from "@/util/database";
 import Footers from "../tag/Footers";
+import LoginBtn from "../tag/LoginBtn";
 
 export default async function Home() {
   const client = await connectDB;
@@ -143,6 +144,7 @@ export default async function Home() {
             회원가입
           </button>
           <div type="submit">
+            <LoginBtn></LoginBtn>
             <a id="custom-login-btn" onClicick="">
               <img
                 src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg"
