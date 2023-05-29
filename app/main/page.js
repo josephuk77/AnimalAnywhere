@@ -7,8 +7,53 @@ export default async function Main() {
   console.log(result);
 
   return (
-    <div className="container">
+    <div>
       <main className="container">
+        <div
+          id="carouselExampleFade"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="..." className="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="..." className="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="..." className="d-block w-100" alt="..." />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        {/* <!-- <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
+        <div class="col-md-6 px-0">
+          <h1 class="display-4 fst-italic">Animal anywhere 인사</h1>
+          <p class="lead my-3">
+            Animal anywhere는 반려인을 위한,애완동물을 위해 의료서비스를
+            제공하고자 노력하는 Animal anywhere입니다!
+          </p>
+          
+        </div>
+      </div> --> */}
         <div className="p-4 p-md-5 mb-4 rounded text-bg-dark">
           <div className="col-md-6 px-0">
             <h1 className="display-4 fst-italic">Animal anywhere 인사</h1>
