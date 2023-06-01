@@ -1,5 +1,5 @@
 import { connectDB } from "@/util/database";
-import LoginBtn from "./tag/LoginBtn";
+import LoginBtn from "../tag/LoginBtn";
 
 export const revalidate = 60; //60초동안 이 페이지 캐싱
 
