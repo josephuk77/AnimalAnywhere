@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Inter, Righteous } from 'next/font/google'
 import LoginBtn from './tag/LoginBtn'
 import LogoutBtn from './tag/LogoutBtn'
 import { authOptions } from '@/pages/api/auth/[...nextauth]'
-import { getServerSession} from 'next-auth'
+import { getServerSession } from 'next-auth'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,16 +18,20 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div className="navbar"> 
-          <Link href="/" className="logo">AnimalAnywhere</Link> 
-          <Link href="/list">List</Link> 
-          {
-          session ? (<LogoutBtn></LogoutBtn>):(<LoginBtn></LoginBtn>)
-          }
-        </div>  
+        <div className="navbar">
+          <Link href="/" className="logo">AnimalAnywhere</Link>
+          <Link href="/list">List</Link>
+         
+            {
+              session
+                ? <span>{session.user.name} <LogoutBtn /> </span>
+                : <LoginBtn></LoginBtn>
+            }
+          
+        </div>
         {children}
       </body>
     </html>
-    
+
   )
 }
