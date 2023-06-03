@@ -4,8 +4,7 @@ import NextAuth from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 import NaverProvider from "next-auth/providers/naver";
 
-const NAVER_CLIENT_ID ='00e2k5nMUxMbYwBcK9_I';
-const NAVER_CLIENT_SECRET='fQ3vQfKpQe';
+
 
 export const authOptions = {
     providers: [
