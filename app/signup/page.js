@@ -1,5 +1,5 @@
 import { connectDB } from "@/util/database";
-
+import Footers from "../tag/Footers";
 export default async function Home() {
   const client = await connectDB;
   const db = client.db("AnimalAnywhere");
@@ -113,6 +113,7 @@ export default async function Home() {
           </div>
         </div>
       </div>
+      <Footers />
     </div>
   );
 }
