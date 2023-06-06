@@ -1,6 +1,9 @@
 
 
-export default function Register() {
+
+export default async function Register() {
+
+
   return (
     <div>
         <form method="POST" action="/api/auth/signup">

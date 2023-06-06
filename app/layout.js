@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import './globals.css'
 import { Inter, Righteous } from 'next/font/google'
-import LoginBtn from './tag/LoginBtn'
-import LogoutBtn from './tag/LogoutBtn'
+import LoginBtn from './component/LoginBtn'
+import LogoutBtn from './component/LogoutBtn'
 import { authOptions } from '@/pages/api/auth/[...nextauth]'
 import { getServerSession } from 'next-auth'
 

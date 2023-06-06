@@ -1,6 +1,7 @@
 import { connectDB } from "@/util/database";
 import { ObjectId } from "mongodb";
 import Link from "next/link";
+import Comment from "@/app/component/Comment";
 
 export default async function Detail(props){
 
@@ -20,8 +21,9 @@ export default async function Detail(props){
             <h4>{result.title}</h4>
             <p>{result.content}</p>
             <div>
-                <Link href={'/edit/'+result._id.toString()}>수정&nbsp;&nbsp;&nbsp;</Link> 
+                <Link href={'/edit/'+result._id.toString()}>✏️&nbsp;&nbsp;&nbsp;</Link> 
             </div>
+                <Comment id={result._id}/>
         </div>
     )
 }

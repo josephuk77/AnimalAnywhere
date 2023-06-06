@@ -7,6 +7,7 @@ export default async function hadler(req, res){
         
         let editpost = {title : req.body.title, content: req.body.content}
         const db = (await connectDB).db('AnimalAnywhere')
+        
         let result = await db.collection('post').updateOne(
             {_id : new ObjectId(req.body._id)},
             {$set : editpost}

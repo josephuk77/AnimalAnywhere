@@ -12,13 +12,13 @@ export default async function hadler(req,res){
 
         let findDb = await db.collection('post').findOne({_id : new ObjectId(req.body)})
 
-        if(findDb.author == session.user.eamil){
+        if(findDb.author == session.user.email){
 
             let result = await db.collection('post').deleteOne({_id: new ObjectId(req.body)}); 
             console.log(result);
             return res.status(200).json('삭제완료')
         }else{
-            return req.status(500).json('현재유저와 작성자 불일치')
+            return res.status(500).json('현재유저와 작성자 불일치')
         }
 
         
