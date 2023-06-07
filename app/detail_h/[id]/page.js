@@ -1,7 +1,7 @@
 import { connectDB } from "@/util/database";
 import { ObjectId } from "mongodb";
 import Comment_h from "@/app/component/Comment_h";
-
+import GoogleMap from "@/app/component/GoogleMap";
 
 export default async function Detail(props){
 
@@ -24,7 +24,7 @@ export default async function Detail(props){
             <p>전화번호:{result.number}</p>
             
             
-      
+            <GoogleMap addr={result.roadaddr}></GoogleMap>
            <Comment_h id={result._id} star={star.star}/>
         </div>
     )

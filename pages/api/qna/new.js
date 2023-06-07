@@ -16,7 +16,7 @@ export default async function hadler(req, res){
             const db = client.db("AnimalAnywhere");
             let result = await db.collection('qna').insertOne(req.body);
         
-            return res.status(200).redirect('/list_q');
+            return res.status(200).redirect('/qna');
         } catch (error) {
             alert("db 오류");
         }

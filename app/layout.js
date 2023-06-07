@@ -116,18 +116,7 @@ export default async function RootLayout({ children }) {
                     병원정보
                   </a>
                 </li>
-                <li>
-                  <a href="#" className="nav-link text-white">
-                    <svg
-                      className="bi d-block mx-auto mb-1"
-                      width="24"
-                      height="24"
-                    >
-                      <use xlinkHref="#people-circle" />
-                    </svg>
-                    병원후기,별점
-                  </a>
-                </li>
+                
               </ul>
             </div>
           </div>
@@ -139,12 +128,7 @@ export default async function RootLayout({ children }) {
               className="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto"
               role="search"
             >
-              <input
-                type="search"
-                className="form-control"
-                placeholder="검색어를 입력하세요.."
-                aria-label="Search"
-              />
+              
             </form>
 
             <div className="text-end">

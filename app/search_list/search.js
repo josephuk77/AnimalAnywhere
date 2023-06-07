@@ -1,16 +1,17 @@
-import { connectDB } from "@/util/database";
-import Link from "next/link";
 import Search from '@/app/component/Search';
+import { connectDB } from '@/util/database';
 
-export default async function List() {
-
-    const client = await connectDB;
-    const db = client.db("AnimalAnywhere");
-    let result = await db.collection('hospital_list').find().toArray(); 
-    console.log(result);
+export default async function search(req) {
+ 
+        const client = await connectDB;
+        const db = client.db("AnimalAnywhere");
+        let result = await db.collection('hospital_list').find({hospital_name:{ $regex: /^24시/ }}).toArray();
+      
 
     return (
-      <div className="list-bg">
+      <div>
+          <Search></Search>
+          <div className="list-bg">
         <Search></Search>
         {
         result.map((a,i)=>{
@@ -24,7 +25,6 @@ export default async function List() {
         })
       }
       </div>
-      
+      </div>
     )
-
-  }
+  }                            

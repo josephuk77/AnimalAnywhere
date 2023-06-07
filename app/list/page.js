@@ -1,6 +1,5 @@
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import { connectDB } from "@/util/database";
-import Link from "next/link";
 import ListItem from "./ListItem";
 import { getServerSession } from 'next-auth'
 
